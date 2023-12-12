@@ -1,8 +1,7 @@
-
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import useState from 'react'
-import CiEdit from 'react-icons/ci';
+import MdEdit from 'react-icons/md';
 import Formulario from './Forms';
 import axios from 'axios';
 
@@ -22,16 +21,15 @@ function Editar({id}) {
     return (
 
         <div>
-            <span style={{cursor:"pointer"}} onClick={() => setShow(true)} className='text-primary'><CiEdit /></span>
+            <span style={{cursor:"pointer"}} onClick={() => setShow(true)} className='text-primary'><MdEdit /></span>
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <h2>Editar</h2>
                 </Modal.Header>
                 <Modal.Body>
-                    <Formulario/>
+                    <Formulario id={id}/>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={excluirDados} variant='danger'>Editar</Button>
                 </Modal.Footer>
             </Modal>
         </div>
