@@ -2,9 +2,10 @@ import Header from "../components/header"
 import Conteudo from "../components/Conteudo"
 import Tabela from "../components/Tabela"
 
-function Painel(){
+function Painel() {
 
     return(
+
         <>
             <Header btn={true}/>
             <Conteudo>
@@ -12,6 +13,7 @@ function Painel(){
                 <Tabela/>
             </Conteudo>
         </>
+
     )
 }
 

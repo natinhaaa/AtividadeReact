@@ -1,15 +1,19 @@
-import { FormControl } from "react-bootstrap"
-import Conteudo from "../components/Conteudo"
-import Header from "../components/header"
+import FormControl from 'react-bootstrap'
+import Conteudo from '../components/Conteudo'
+import Header from '../components/header'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
-import { useState } from "react"
+import useState from 'react'
+
 function Login(){
+
     const [alert, setAlert]= useState(false)
-    /*previnir comportamento padrão (reload da pag)*/
+
     function autenticar(event){
+
         event.preventDefault()
+
         const email = event.target[0].value
         const pass = event.target[1].value
 
@@ -25,7 +29,9 @@ function Login(){
         }
 
     }
+
     return(
+
         <>
             <Header btn={false}/>
             <Conteudo>
@@ -35,7 +41,7 @@ function Login(){
                         <Form.Label>
                             Email:
                         </Form.Label>
-                        <FormControl type="email" placeholder="Insira seu email" required/>
+                        <FormControl type="email" placeholder="Insira seu e-mail" required/>
                     </Form.Group>
                     <Form.Group>
                         <Form.Label className="mt-3">
@@ -44,10 +50,12 @@ function Login(){
                         <FormControl type="password" placeholder="Insira sua senha" required/>
                     </Form.Group>
                     <Button className="mt-3" type="submit">Login</Button>
-                    {alert ? <Alert className="mt-3" variant="danger">Usuário ou senha incorreto</Alert>: ""}
+                    {alert ? <Alert className="mt-3" variant="danger">Usuário ou senha incorretos.</Alert>: ""}
                 </Form>
             </Conteudo>
         </>
+
     )
 }
+
 export default Login
