@@ -10,14 +10,6 @@ function Editar({id}) {
 
     const [show,setShow] = useState(false)
 
-    function excluirDados() {
-
-        axios.delete("https://apiaulas.thiagodev502.repl.co/funcionarios/"+ id).then(() => {location.reload()})
-        .catch((erro) => {
-            console.log("Erro ao excluir", erro)
-        })
-    }
-
     return (
 
         <div>

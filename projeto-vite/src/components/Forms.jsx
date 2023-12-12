@@ -2,7 +2,7 @@ import { Form } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
-function Formulario({id}) {
+function Formulario({id, setShow}) {
 
     function enviarDados(event) {
         const nome = event.target[0].value
@@ -12,8 +12,19 @@ function Formulario({id}) {
     }
 
     if(id) {
-        axios.put("https://apiaulas.thiagodev502.repl.co/funcionarios/" + id
-        , );
+        axios.put("https://apiaulas.thiagodev502.repl.co/funcionarios/" + id,
+
+        {
+            nome,
+            cargo,
+            departamento,
+            salario
+        }
+
+        ).then(() => {
+
+        }
+        );
 
     }
     return (

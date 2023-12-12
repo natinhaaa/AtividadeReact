@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
 import useState from 'react'
 
-function Login(){
+function Login() {
 
     const [alert, setAlert]= useState(false)
 
