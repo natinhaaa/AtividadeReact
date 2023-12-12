@@ -1,12 +1,11 @@
-import Table from 'react-bootstrap/Table';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import Editar from './Editar';
-import Excluir from './Excluir';
+import Table from "react-bootstrap/Table"
+import axios from "axios"
+import {useState, useEffect} from 'react'
+import Editar from "./Editar"
+import Excluir from "./Excluir"
 
 
 function Tabela() {
-
     const[btnValue, setBtnValue] = useState("Atualizar")
     const [dados, setDados] = useState([])
 
@@ -18,7 +17,6 @@ function Tabela() {
 },[btnValue])
     
     return (
-
         <>
             <button onClick={()=> setBtnValue("Atualizado")}>{btnValue}</button>
             <Table>
@@ -47,8 +45,6 @@ function Tabela() {
                 </tbody>
             </Table>
         </>
-
     )
 }
-
 export default Tabela

@@ -1,20 +1,16 @@
-import Header from "../components/Header"
+import Header from "../components/header"
 import Conteudo from "../components/Conteudo"
 import Tabela from "../components/Tabela"
-
 function Painel() {
-
-    return(
-
+    return (
         <>
-            <Header btn={true}/>
+
+            <Header btn={true} />
             <Conteudo>
                 <h2>Lista de funcionários</h2>
-                <Tabela/>
+                <Tabela />
             </Conteudo>
         </>
-
     )
 }
-
 export default Painel
